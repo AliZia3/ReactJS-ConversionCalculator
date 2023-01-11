@@ -1,13 +1,94 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --primary: #d81e5b;
+  --dark: #131a26;
+  --light: #eee;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+body {
+  background-color: var(--light);
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  width: 50vh;
+  background-color: var(--dark);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.display {
+  height: 20vh;
+  width: 35vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#input-field {
+  width: 30vh;
+  background-color: var(--light);
+  color: black;
+  padding: 20px;
+  font-size: 24px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.result {
+  color: var(--light);
+  width: 35vh;
+  padding: 20px;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35vh;
+  overflow-x: auto;
+}
+
+.conversion {
+  color: var(--primary);
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons {
+  background-color: var(--primary);
+  color: var(--light);
+  padding: 20px;
+  border-radius: 40px;
+  font-size: 16px;
+}
+
+.buttons:hover {
+  transition: 0.3s;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.clear {
+  text-align: center;
+  width: 100%;
 }
